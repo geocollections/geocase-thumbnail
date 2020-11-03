@@ -1,0 +1,15 @@
+{
+  "name": "geocase-thumbs",
+  "version": "1.0.0",
+  "description": "The GeoCASe-UI 2.0 requires an image-server to hold thumbnails of images locates under various domains. In order to speed up the loading of these images this instance of [Imaginary](https://github.com/h2non/imaginary) is being created.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "http://code.naturkundemuseum.berlin/Jasper.Funk-Smit/GeoCASe-Thumbs.git"
+  },
+  "author": "Jasper Funk-Smit",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}
