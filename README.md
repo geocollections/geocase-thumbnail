@@ -1,4 +1,4 @@
-# GeoCASe-Thumbs
+# GeoCASe-Thumbnails
 
 The [GeoCASe-UI 2.0](http://geocase.geocollections.info/) requires an image-server to generate thumbnails of images from various domains.
 
