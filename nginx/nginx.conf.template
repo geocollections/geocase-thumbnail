@@ -1,4 +1,5 @@
 
+
 http {
 
     # - levels: nestiness of cache directories, ie /cache/c/29/b7f54b2df7773722d382f4809d65029c
@@ -6,7 +7,8 @@ http {
     # - max_size: max size of cache entries on disk.
     # — inactive: amount of time a key/value pair can live in cache (even if it was accessed recently).
     # - use_temp_path: on/off to use nginx configured tmp directory.
-    proxy_cache_path /opt/nginx-cache/ levels=1:2 keys_zone=myservice_cache:10m max_size=10g inactive=24h use_temp_path=off;
+    proxy_cache_path /opt/nginx-proxy-cache/ levels=1:2 keys_zone=cache_zone:${CACHE_INDEX_SIZE} max_size=${CACHE_MAX_SIZE} inactive=${CACHE_TTL} use_temp_path=off;
+   
 
     server {
 
@@ -16,15 +18,15 @@ http {
         root /etc/nginx/html/;
 
         # Caching setup is quite aggressive, we assume MyService to be append-only.
-        proxy_cache myservice_cache;
+        proxy_cache cache_zone;
 
         # Cache authenticated requests by making basic auth `Authorization` header part of a cache key.
         proxy_cache_key "$http_authorization$request_uri";
-
+        
         proxy_cache_methods GET HEAD;
 
         # Cache `200` responses for 24 hours.
-        proxy_cache_valid 200 24h;
+        proxy_cache_valid 200 ${CACHE_TTL};
 
         # Cache `404` responses for 10 minutes, 404 might be resolved to 200 later.
         proxy_cache_valid 404 10m;
@@ -38,10 +40,15 @@ http {
         proxy_read_timeout 10s;
         proxy_connect_timeout 1s;
 
+
         # h2non imaginary endpoints
         location ~ /(health|form|info|crop|smartcrop|resize|enlarge|extract|zoom|thumbnail|fit|rotate|autorotate|flip|flop|convert|pipeline|watermark|watermarkimage|blur)$ {
-            add_header X-Frame-Options REDIR;
+            proxy_ignore_headers Cache-Control;
+            proxy_ignore_headers Expires;
+
+            add_header X-Proxy-Cache $upstream_cache_status;
             proxy_pass http://imaginary:9000;
+            
         } 
 
         # Everything else redirects to index.php, which is our image-proxy
@@ -56,7 +63,7 @@ http {
             fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-            fastcgi_param PATH_INFO $fastcgi_path_info;
+            fastcgi_param PATH_INFO $fastcgi_path_info;        
         }
     }
 }
