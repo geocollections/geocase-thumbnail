@@ -2,7 +2,6 @@
 
     $url = "";
     $count = count($_GET);
-
     if( isset( $_GET['url'] ) && $count === 1 )
     {
         $url = $_GET[ 'url' ];

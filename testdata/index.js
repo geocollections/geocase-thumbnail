@@ -4,7 +4,7 @@ var _ = require("lodash");
 console.log(__dirname);
 
 let list = [],
-  max_images_per_json = 10;
+  max_images_per_json = 100;
 
 fs.readdirSync(`${__dirname}/json/`).forEach(file => {
   const json = fs.readFileSync(`${__dirname}/json/${file}`);
