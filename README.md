@@ -2,9 +2,8 @@
 
 The [GeoCASe-UI 2.0](http://geocase.geocollections.info/) requires an image-server to generate thumbnails of images from various domains.
 
-The docker-compose.yml creates a docker application with four services:
+The docker-compose.yml creates a docker application with three services:
 
-- A [Varnish cache](https://github.com/eea/eea.docker.varnish) put before
 - an [NGINX](https://www.nginx.com/) server which uses
   - [h2non/Imaginary](https://github.com/h2non/imaginary) for rendering the images and
   - [PHP](https://hub.docker.com/_/php) for creating an image-proxy.
@@ -105,7 +104,3 @@ Complete list of available params. Take a look to each specific [endpoint](https
 - **sign** `string` - URL signature (URL-safe Base64-encoded HMAC digest)
 - **interlace** `bool` - Use progressive / interlaced format of the image output. Defaults to `false`
 - **aspectratio** `string` - Apply aspect ratio by giving either image's height or width. Exampe: `16:9`
-
-### Varnish
-
-[Varnish Cache](https://varnish-cache.org/) is a web application accelerator also known as a caching HTTP reverse proxy. You install it in front of any server that speaks HTTP and configure it to cache the contents. Varnish Cache is really, really fast. It typically speeds up delivery with a factor of 300 - 1000x, depending on your architecture.
