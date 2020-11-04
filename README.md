@@ -1,21 +1,25 @@
-# GeoCASe-Thumbnails
+# GeoCASe-thumbnail
 
 The [GeoCASe-UI 2.0](http://geocase.geocollections.info/) requires an image-server to generate thumbnails of images from various domains.
 
 The docker-compose.yml creates a docker application with four services:
 
-1. a [Varnish](https://github.com/eea/eea.docker.varnish) cache.
-1. [Imaginary](https://github.com/h2non/imaginary) for rendering the images.
-1. an nginx server
-1. a php engine
+- A [Varnish cache](https://github.com/eea/eea.docker.varnish) put before
+- an [NGINX](https://www.nginx.com/) server which uses
+  - [h2non/Imaginary](https://github.com/h2non/imaginary) for rendering the images and
+  - [PHP](https://hub.docker.com/_/php) for creating an image-proxy.
 
 ## Getting started
 
-`docker-compose up` starts the service(s) at http://localhost:2020. You can change this in `docker-compose.yml`. Check this [test-image](http://localhost:2020/resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg).
+`docker-compose up` starts the services at http://localhost:2020. You can change the port in `docker-compose.yml`. Try out these urls to test if the service is running:
+
+- [Resized 100x](http://localhost:2020/resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg)
+- [Proxied](http://localhost:2020/?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg)
+- [Original](http://www.geo-coll.ethz.ch/look_eth2/file/image/53/0000000006021.jpg)
 
 ## Testing
 
-Some test-urls were downloaded from [GeoCASe 2.0](http://geocase.geocollections.info/). You can render an html file showing these images using:
+Some test-urls were downloaded from [GeoCASe 2.0](http://geocase.geocollections.info/). You can render an html file showing these images with:
 
 ```
 npm install
@@ -23,17 +27,43 @@ node testdata
 serve testdata
 ```
 
-If you now open the test/index.html in a browser, you should slowly(>30s) see generated and loaded images appearing. Afters all images have loaded, and you refresh the browser all images should show up very fast(<1s).
+The first time you load the page the images need to be written. After reload they should come from the varnish-cache and display considerately faster.
 
-## Imaginary
+## Services
+
+### Imaginary
 
 `Imaginary` is a **[Fast](#benchmarks) HTTP [microservice](http://microservices.io/patterns/microservices.html)** written in Go **for high-level image processing** backed by [bimg](https://github.com/h2non/bimg) and [libvips](https://github.com/jcupitt/libvips). `imaginary` can be used as private or public HTTP service for massive image processing with first-class support for [Docker](#docker) & [Fly.io](#flyio).
 It's almost dependency-free and only uses [`net/http`](http://golang.org/pkg/net/http/) native package without additional abstractions for better [performance](#performance).
 
-### Params
+#### Endpoints
 
-Complete list of available params. Take a look to each specific [endpoint](https://github.com/h2non/imaginary/blob/master/README.md#params) to see which params are supported.
-Image measures are always in pixels, unless otherwise indicated.
+- /health
+- /form
+- /info
+- /crop
+- /smartcrop
+- /resize
+- /enlarge
+- /extract
+- /zoom
+- /thumbnail
+- /fit
+- /rotate
+- /autorotate
+- /flip
+- /flop
+- /convert
+- /pipeline
+- /watermark
+- /watermarkimage
+- /blur
+
+Read more about `imaginary`s endpoints [here](https://github.com/h2non/imaginary#get-)
+
+#### Params
+
+Complete list of available params. Take a look to each specific [endpoint](https://github.com/h2non/imaginary/blob/master/README.md#params) to see which params are supported. Image measures are always in pixels, unless otherwise indicated.
 
 - **width** `int` - Width of image area to extract/resize
 - **height** `int` - Height of image area to extract/resize
@@ -76,6 +106,6 @@ Image measures are always in pixels, unless otherwise indicated.
 - **interlace** `bool` - Use progressive / interlaced format of the image output. Defaults to `false`
 - **aspectratio** `string` - Apply aspect ratio by giving either image's height or width. Exampe: `16:9`
 
-## Varnish
+### Varnish
 
-[Varnish Cache](https://varnish-cache.org/) is a web application accelerator also known as a caching HTTP reverse proxy. You install it in front of any server that speaks HTTP and configure it to cache the contents. Varnish Cache is really, really fast. It typically speeds up delivery with a factor of 300 - 1000x, depending on your architecture. A high level overview of what Varnish does can be seen in this video.
+[Varnish Cache](https://varnish-cache.org/) is a web application accelerator also known as a caching HTTP reverse proxy. You install it in front of any server that speaks HTTP and configure it to cache the contents. Varnish Cache is really, really fast. It typically speeds up delivery with a factor of 300 - 1000x, depending on your architecture.
