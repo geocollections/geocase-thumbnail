@@ -1,6 +1,7 @@
 <?php
 
     $info = "None";
+    $uri = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
     if( isset( $_GET['url'] ) &&  count($_GET) === 1 )
     {
         $url = $_GET[ 'url' ];
@@ -30,10 +31,13 @@
     // ELSE
     $status = array(
         "message" => "Cannot process the image due to missing or invalid params",
-        "status" => 400,
-        "info" => "$info"
+        "status" => 404,
+        "info" => "$info",
+        "uri" => "$uri",
+        "params" => $_GET
     );
     header('Content-type: application/json');
+    var_dump(http_response_code(404));
     exit(json_encode($status));
 
 ?>

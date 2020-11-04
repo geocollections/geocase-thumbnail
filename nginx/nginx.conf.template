@@ -7,8 +7,8 @@ http {
     # - max_size: max size of cache entries on disk.
     # — inactive: amount of time a key/value pair can live in cache (even if it was accessed recently).
     # - use_temp_path: on/off to use nginx configured tmp directory.
-    proxy_cache_path /opt/nginx-proxy-cache/ levels=1:2 keys_zone=cache_zone:${CACHE_INDEX_SIZE} max_size=${CACHE_MAX_SIZE} inactive=${CACHE_TTL} use_temp_path=off;
-   
+    proxy_cache_path /opt/nginx-proxy-cache/ levels=1:2 keys_zone=proxy_cache_zone:${CACHE_INDEX_SIZE} max_size=${CACHE_MAX_SIZE} inactive=${CACHE_TTL} use_temp_path=off;
+    fastcgi_cache_path /opt/nginx-fcgi-cache/ levels=1:2 keys_zone=fcgi_cache_zone:${CACHE_INDEX_SIZE} max_size=${CACHE_MAX_SIZE} inactive=${CACHE_TTL} use_temp_path=off;
 
     server {
 
@@ -18,10 +18,11 @@ http {
         root /etc/nginx/html/;
 
         # Caching setup is quite aggressive, we assume MyService to be append-only.
-        proxy_cache cache_zone;
+        proxy_cache proxy_cache_zone;
 
         # Cache authenticated requests by making basic auth `Authorization` header part of a cache key.
         proxy_cache_key "$http_authorization$request_uri";
+        
         
         proxy_cache_methods GET HEAD;
 
@@ -29,7 +30,7 @@ http {
         proxy_cache_valid 200 ${CACHE_TTL};
 
         # Cache `404` responses for 10 minutes, 404 might be resolved to 200 later.
-        proxy_cache_valid 404 10m;
+        proxy_cache_valid 404 1s;
 
         # Allow parallel cache update while we serve stale cache entry.
         proxy_cache_background_update on;
@@ -40,6 +41,13 @@ http {
         proxy_read_timeout 10s;
         proxy_connect_timeout 1s;
 
+        fastcgi_cache_key "$http_authorization$request_uri";
+        fastcgi_cache fcgi_cache_zone;
+        fastcgi_cache_valid 200 ${CACHE_TTL};
+        fastcgi_cache_valid 404 1s;
+        
+        index           index.php index.html;
+        fastcgi_index   index.php;
 
         # h2non imaginary endpoints
         location ~ /(health|form|info|crop|smartcrop|resize|enlarge|extract|zoom|thumbnail|fit|rotate|autorotate|flip|flop|convert|pipeline|watermark|watermarkimage|blur)$ {
@@ -51,19 +59,18 @@ http {
             
         } 
 
+       
         # Everything else redirects to index.php, which is our image-proxy
-        location / {
-            try_files $uri $uri/ /index.php;
+        location /  {
+            try_files $uri $uri/ /index.php$is_args$args;
         }
 
         location ~ \.php$ {
-            try_files $uri =404;
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
-            fastcgi_pass php:9000;
-            fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-            fastcgi_param PATH_INFO $fastcgi_path_info;        
+            fastcgi_param PATH_INFO $fastcgi_path_info;
+            fastcgi_pass php:9000;          
         }
     }
 }
