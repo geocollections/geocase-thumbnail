@@ -33,7 +33,9 @@
     $status = array(
         "message" => "Cannot process the image due to missing or invalid params",
         "status" => 404,
-        "info" => "$info"
+        "info" => "$info",
+        "uri" => "$uri",
+        "params" => $_GET
     );
     header('Content-type: application/json');
     var_dump(http_response_code(404));
