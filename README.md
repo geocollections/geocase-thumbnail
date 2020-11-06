@@ -4,7 +4,7 @@ The [GeoCASe-UI 2.0](http://geocase.geocollections.info/) requires an image-serv
 
 The docker-compose.yml creates a docker application with three services:
 
-- an [NGINX](https://www.nginx.com/) server which uses
+- an [openresty](https://hub.docker.com/r/openresty/openresty/) version of [NGINX](https://www.nginx.com/) server which uses
   - [h2non/Imaginary](https://github.com/h2non/imaginary) for rendering the images and
   - [PHP](https://hub.docker.com/_/php) for creating an image-proxy.
 

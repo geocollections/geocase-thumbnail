@@ -1,7 +1,7 @@
 version: "3"
 services:
   nginx:
-    image: openresty/openresty:centos
+    image: openresty/openresty:alpine-fat
     volumes:
       - ./image-proxy:/etc/nginx/html/
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
