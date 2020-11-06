@@ -34,28 +34,61 @@ const template = `
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./index.css" type="text/css">
+    <script>
+
+      function purge(uri){
+        console.log('purge/' + uri);
+        fetch('http://localhost:2020/purge/' + uri,  { method: 'GET'})
+          .then( response => response.json() )
+          .then(data =>  {
+            console.log(data)
+            alert( JSON.stringify(data, null, 2))
+          });
+      }
+    
+    </script>
   </head>
   <body>
- {CONTENT}
+    <hr/>
+    <button onclick="purge('all')">purge-all</button>
+    <hr/>
+    <h3>Icons</h3>
+    {ICONS}
+    <hr/>
+    <h3>Originals</h3>
+    {IMAGES}
   </body>
 </html>
 `;
 
-const imaginary = template.replace(
-  "{CONTENT}",
-  list.reduce(
-    (a, c) => {
+const imaginary = template
+  .replace(
+    "{ICONS}",
+    list.reduce((a, c) => {
       const uri = encodeURIComponent(c);
       return (
         a +
-        `<a href="http://localhost:2020/?url=${uri}" target="_blank" title="Original url:${c}"><img src="http://localhost:2020/resize?width=100&url=${uri}"/></a>`
+        `<div class="thumb">
+          <img src="http://localhost:2020/resize?width=100&url=${uri}" title="Original url:${c}" />
+          <button onclick="purge('resize?width=100&url=${uri}')">purge-icon</button>
+        </div>`
       );
-    },
-
-    ""
+    }, "")
   )
-);
+  .replace(
+    "{IMAGES}",
+    list.reduce((a, c) => {
+      const uri = encodeURIComponent(c);
+      return (
+        a +
+        `<div class="full">
+        <img src="http://localhost:2020/?url=${uri}" title="Original url:${c}" />
+        <button onclick="purge('?url=${uri}')">purge-image</button>
+      </div>`
+      );
+    }, "")
+  );
 
-console.log("Saving imaginary.html preview...");
+console.log("Saving index.html preview...");
 fs.writeFileSync(`${__dirname}/index.html`, imaginary);
 console.log("Done.");

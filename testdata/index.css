@@ -2,17 +2,55 @@ body {
   padding: 0;
   margin: 0;
   background: #ccc;
+  padding: 1em;
 }
 
-a {
+div {
+  position: relative;
+}
+
+.thumb {
   display: block;
   float: left;
   height: 100px;
   width: 100px;
   background: white;
-  margin: 1em;
+  margin: 0 1em 1em 0;
 }
 
-img {
+.thumb img {
+  max-width: 100%;
   max-height: 100%;
+}
+
+h3 {
+  clear: both;
+}
+
+hr {
+  clear: both;
+}
+
+.full {
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  background: white;
+  margin: 0 1em 1em 0;
+}
+
+.full img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.full button,
+.thumb button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }

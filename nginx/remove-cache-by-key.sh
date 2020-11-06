@@ -1,9 +1,18 @@
-#!/bin/bash
-# echo "yo" >&2
-# ls /opt/nginx-fcgi-cache/ >&2
-# echo $("rm -rf /opt/nginx-fcgi-cache/$1") >&2
+#!/bin/sh
+echo "remove-cache-by-key.sh $@>> "
 
+if [[ $@ == *"url="* ]]
+then
 
-echo ">>>>>>>>>>>>>>>>>> Purge request: path:$1 args:$2" >&2
+    grep_result=`grep -lr $@ /opt/`
 
-# rm -rf $(grep -lr "$1" /opt/nginx-fcgi-cache/) >&2
+    if test -z "$grep_result" 
+    then
+        echo "NOT_CACHED:params:$@"
+    else
+        result=`rm -rfv $grep_result`
+        echo "SUCCESS:$result"
+    fi
+else
+    echo "INVALID_PARAMS:$@"
+fi
