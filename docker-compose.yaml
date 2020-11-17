@@ -1,7 +1,7 @@
 version: "3"
 services:
   express:
-    build: ./
+    build: ./express
     ports:
       - "2020:4000"
 

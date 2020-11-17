@@ -4,9 +4,9 @@ var _ = require("lodash");
 console.log(__dirname);
 
 let list = [],
-  max_images_per_json = 5;
+  max_images_per_json = 5000;
 
-fs.readdirSync(`${__dirname}/json/`).forEach((file) => {
+fs.readdirSync(`${__dirname}/json/`).forEach(file => {
   const json = fs.readFileSync(`${__dirname}/json/${file}`);
   const data = JSON.parse(json);
   const docs = _.get(data, "response.docs");
@@ -22,7 +22,7 @@ fs.readdirSync(`${__dirname}/json/`).forEach((file) => {
 });
 
 /** Zürich files have a new api url */
-list = list.map((u) => u.replace("look_eth", "look_eth2"));
+list = list.map(u => u.replace("look_eth", "look_eth2"));
 
 console.log(`Saving ${list.length} urls.`);
 fs.writeFileSync(`${__dirname}/urls.json`, JSON.stringify(list, null, 2));
@@ -36,14 +36,12 @@ const template = `
     <link rel="stylesheet" href="./index.css" type="text/css">
     <script>
 
-      function purge(uri){
-        console.log('purge/' + uri);
-        fetch('http://localhost:2020/purge/' + uri,  { method: 'GET'})
+      function removeThumbnails(uri){
+        console.log('thumbnail/delete/' + uri);
+        fetch('http://localhost:2020/thumbnail/delete/' + uri,  { method: 'GET'})
           .then( response => {
-            console.log(response);
             return response.json();
           }).then(data =>  {
-            console.log(data)
             alert( JSON.stringify(data, null, 2))
           }).catch(e => {
             console.log(e)
@@ -54,7 +52,10 @@ const template = `
   </head>
   <body>
     <hr/>
-    <button onclick="purge('all')">purge-all</button>
+    <button onclick="removeThumbnails('*')">Delete all</button>
+    <button onclick="removeThumbnails('*mfn-berlin')">Delete *mfn-berlin</button>
+    <button onclick="removeThumbnails('*geocollections')">Delete *geocollections</button>
+    <button onclick="removeThumbnails('*ethz.ch')">Delete *ethz.ch</button>
     <hr/>
     <h3>Icons</h3>
     {ICONS}
@@ -70,7 +71,7 @@ const imaginary = template.replace(
       a +
       `<div class="thumb">
           <img src="http://localhost:2020/thumbnail/${uri}" title="Original url:${c}" />
-          <button onclick="purge('resize?width=100&url=${uri}')">purge-icon</button>
+          <button onclick="removeThumbnails('${uri}')">Delete</button>
         </div>`
     );
   }, "")

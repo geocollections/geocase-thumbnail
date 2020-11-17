@@ -6,10 +6,13 @@
     "type": "git",
     "url": "https://github.com/geocollections/geocase-thumbnail.git"
   },
+  "scripts": {
+    "start": "node app.js"
+  },
   "author": "Jasper Funk-Smit",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.20",
-    "serve": "^11.3.2"
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
   }
 }
