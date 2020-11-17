@@ -8,6 +8,12 @@
   },
   "author": "Jasper Funk-Smit",
   "license": "ISC",
+  "scripts": {
+    "all": "node testdata && docker-compose up -d && serve testdata",
+    "docker:start": "docker-compose up",
+    "test:update": "node testdata",
+    "test:serve": "serve testdata"
+  },
   "dependencies": {
     "lodash": "^4.17.20",
     "serve": "^11.3.2"
