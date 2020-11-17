@@ -9,11 +9,16 @@
       function purge(uri){
         console.log('purge/' + uri);
         fetch('http://localhost:2020/purge/' + uri,  { method: 'GET'})
-          .then( response => response.json() )
-          .then(data =>  {
+          .then( response => {
+            console.log(response);
+            return response.json();
+          }).then(data =>  {
             console.log(data)
             alert( JSON.stringify(data, null, 2))
-          });
+          }).catch(e => {
+            console.log(e)
+          })
+          
       }
     
     </script>
@@ -24,128 +29,65 @@
     <hr/>
     <h3>Icons</h3>
     <div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/17/0000000007809.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/17/0000000007809.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/15/0000000007719.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/15/0000000007719.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/11/0000000007441.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/11/0000000007441.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/93/P5086757_Protomya macilenta 800x600.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/93/P5086757_Protomya macilenta 800x600.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/52/0000000006020.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/52/0000000006020.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_00049__et_Argentit.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_00049__et_Argentit.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_6859__et_Argentit.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_6859__et_Argentit.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_7736__et_Argentit.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_7736__et_Argentit.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1998_4763__Argentit.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1998_4763__Argentit.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_5575__et_Argentit.jpg" />
+          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_5575__et_Argentit.jpg" />
           <button onclick="purge('resize?width=100&url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" title="Original url:https://files.geocollections.info/medium/4a/09/4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" title="Original url:https://files.geocollections.info/medium/4a/09/4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg" title="Original url:https://files.geocollections.info/medium/e1/cf/e1cf09a2-8d9a-4503-a42b-539b04945756.jpg" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg" title="Original url:https://files.geocollections.info/medium/e1/cf/e1cf09a2-8d9a-4503-a42b-539b04945756.jpg" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" title="Original url:https://files.geocollections.info/medium/9b/ac/9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" title="Original url:https://files.geocollections.info/medium/9b/ac/9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg" title="Original url:https://files.geocollections.info/medium/ae/73/ae73096e-4540-4321-b25f-ea1d7a31634d.jpg" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg" title="Original url:https://files.geocollections.info/medium/ae/73/ae73096e-4540-4321-b25f-ea1d7a31634d.jpg" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" title="Original url:https://files.geocollections.info/medium/1c/1d/1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" title="Original url:https://files.geocollections.info/medium/1c/1d/1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24794" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24794" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29548" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29548" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29159" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29159" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24792" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24792" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792')">purge-icon</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF31672" />
+          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF31672" />
           <button onclick="purge('resize?width=100&url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672')">purge-icon</button>
         </div>
-    <hr/>
-    <h3>Originals</h3>
-    <div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/17/0000000007809.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/15/0000000007719.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/11/0000000007441.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/93/P5086757_Protomya macilenta 800x600.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/52/0000000006020.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_00049__et_Argentit.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_6859__et_Argentit.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_7736__et_Argentit.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1998_4763__Argentit.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_5575__et_Argentit.jpg" />
-        <button onclick="purge('?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" title="Original url:https://files.geocollections.info/medium/4a/09/4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" />
-        <button onclick="purge('?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg" title="Original url:https://files.geocollections.info/medium/e1/cf/e1cf09a2-8d9a-4503-a42b-539b04945756.jpg" />
-        <button onclick="purge('?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" title="Original url:https://files.geocollections.info/medium/9b/ac/9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" />
-        <button onclick="purge('?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg" title="Original url:https://files.geocollections.info/medium/ae/73/ae73096e-4540-4321-b25f-ea1d7a31634d.jpg" />
-        <button onclick="purge('?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" title="Original url:https://files.geocollections.info/medium/1c/1d/1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" />
-        <button onclick="purge('?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24794" />
-        <button onclick="purge('?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29548" />
-        <button onclick="purge('?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29159" />
-        <button onclick="purge('?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24792" />
-        <button onclick="purge('?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792')">purge-image</button>
-      </div><div class="full">
-        <img src="http://localhost:2020/?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF31672" />
-        <button onclick="purge('?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672')">purge-image</button>
-      </div>
   </body>
 </html>
