@@ -37,7 +37,7 @@ const renderAndGetImage = (url, filename, res, next) => {
    * Query the h2non/imaginary server
    * */
   http
-    .request(url, function(http_res) {
+    .request(url, function (http_res) {
       const { statusCode } = http_res,
         contentType = http_res.headers["content-type"];
 
@@ -56,13 +56,13 @@ const renderAndGetImage = (url, filename, res, next) => {
         const data = new stream.Transform();
 
         /** Collect chunks */
-        http_res.on("data", function(chunk) {
+        http_res.on("data", function (chunk) {
           data.push(chunk);
         });
 
         /** Wait for data to complete */
-        http_res.on("end", function() {
-          fs.writeFile(filename, data.read(), err => {
+        http_res.on("end", function () {
+          fs.writeFile(filename, data.read(), (err) => {
             if (err) {
               /** File writing error */
               next(err);
@@ -92,33 +92,33 @@ app.get("/", (req, res) => {
     jsonapi: {
       endpoint: {
         "/thumbnails": { description: "List all cached thumbnails" },
-        "/thumbnail/:url": {
+        "/thumbnail/?url=url": {
           description:
-            "Return a cached thumbnail. If it is not present one will be generated. Use ?force=1 to ignore the cache and recreate the image."
+            "Return a cached thumbnail. If it is not present one will be generated. Use ?force=1 to ignore the cache and recreate the image.",
         },
-        "/thumbnail/delete/:url": {
+        "/thumbnail/delete/?url=url": {
           description:
-            "Delete a cached thumbnail. If {url} starts with an asterix(*), if will be interpreted as a wildcard."
-        }
-      }
-    }
+            "Delete a cached thumbnail. If {url} starts with an asterix(*), if will be interpreted as a wildcard.",
+        },
+      },
+    },
   });
 });
 
 /** List of all thumbnails */
 app.get("/thumbnails", async (req, res, next) => {
   let result = [];
-  fs.readdirSync(THUMBS).forEach(file => {
+  fs.readdirSync(THUMBS).forEach((file) => {
     result.push(file);
   });
   res.send({ data: result });
 });
 
 /** Thumbnail endpoint */
-app.get("/thumbnail/:url", async (req, res, next) => {
+app.get("/thumbnail", async (req, res, next) => {
   const { params, query } = req;
 
-  const encoded = encodeURIComponent(params.url),
+  const encoded = encodeURIComponent(decodeURIComponent(query.url)),
     url = `http://imaginary:9000/resize?width=200&url=${encoded}`,
     filename = `${THUMBS}/${encoded}`;
 
@@ -131,14 +131,14 @@ app.get("/thumbnail/:url", async (req, res, next) => {
 });
 
 /** Delete thumbnail endpoint */
-app.get("/thumbnail/delete/:url", async (req, res, next) => {
-  const { params } = req;
+app.get("/thumbnail/delete", async (req, res, next) => {
+  const { params, query } = req;
 
-  if (params.url.indexOf("*") === 0) {
+  if (query.url.indexOf("*") === 0) {
     let errors = [],
       success = [];
-    fs.readdirSync(THUMBS).forEach(file => {
-      if (file.indexOf(params.url.substring(1)) !== -1) {
+    fs.readdirSync(THUMBS).forEach((file) => {
+      if (file.indexOf(query.url.substring(1)) !== -1) {
         try {
           fs.unlinkSync(`${THUMBS}/${file}`);
           success.push(file);
@@ -150,15 +150,21 @@ app.get("/thumbnail/delete/:url", async (req, res, next) => {
 
     const result = {
       data: { message: `Deleted ${success.length} files` },
-      files: success
+      files: success,
     };
     if (errors.length) result.errors = errors;
     res.send(result);
   } else {
     try {
-      fs.unlinkSync(`${THUMBS}/${encodeURIComponent(params.url)}`);
+      fs.unlinkSync(
+        `${THUMBS}/${encodeURIComponent(decodeURIComponent(query.url))}`
+      );
       res.send({
-        data: { message: `Deleted ${encodeURIComponent(params.url)}` }
+        data: {
+          message: `Deleted ${encodeURIComponent(
+            decodeURIComponent(query.url)
+          )}`,
+        },
       });
     } catch (err) {
       next(err);
@@ -172,12 +178,12 @@ app.get("/thumbnail/delete/:url", async (req, res, next) => {
  */
 
 /** Default 404 endpoint */
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.status(404).send({ errors: [{ status: 404, code: "Page Not Found" }] });
 });
 
 /** Catching errors */
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   res.status(500).send({ errors: [{ code: err.message }] });
 });
 

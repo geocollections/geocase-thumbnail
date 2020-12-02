@@ -8,7 +8,7 @@
 
       function removeThumbnails(uri){
         console.log('thumbnail/delete/' + uri);
-        fetch('http://localhost:2020/thumbnail/delete/' + uri,  { method: 'GET'})
+        fetch('http://localhost:2020/thumbnail/delete/?url=' + uri,  { method: 'GET'})
           .then( response => {
             return response.json();
           }).then(data =>  {
@@ -29,713 +29,125 @@
     <hr/>
     <h3>Icons</h3>
     <div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F38%2FTaenidium%20radiatum%202%20Schr%C3%B6ter_als%20photo.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/38/Taenidium radiatum 2 Schröter_als photo.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F38%2FTaenidium%20radiatum%202%20Schr%C3%B6ter_als%20photo.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F103%2F0000000002841.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/103/0000000002841.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/103/0000000002841.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F65%2FRasenia%20moeschi.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/65/Rasenia moeschi.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F65%2FRasenia%20moeschi.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F105%2F0000000002843.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/105/0000000002843.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/105/0000000002843.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/53/0000000006021.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F18%2F5431%20Millericrinus%20nodotianus_72dpi.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/18/5431 Millericrinus nodotianus_72dpi.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/18/5431 Millericrinus nodotianus_72dpi.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F54%2F0000000007945.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/54/0000000007945.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F54%2F0000000007945.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F100%2FCarcharodon%20escheri.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/100/Carcharodon escheri.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/100/Carcharodon escheri.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F25%2F0000000006190_O.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/25/0000000006190_O.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F25%2F0000000006190_O.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F98%2FCarcharodon%20polygyrus%20Agassiz.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/98/Carcharodon polygyrus Agassiz.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/98/Carcharodon polygyrus Agassiz.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F104%2F0000000002842.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/104/0000000002842.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F104%2F0000000002842.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/17/0000000007809.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/17/0000000007809.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F50%2F0000000007668.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/50/0000000007668.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F50%2F0000000007668.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/15/0000000007719.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/15/0000000007719.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F49%2F0000000007937.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/49/0000000007937.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F49%2F0000000007937.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/11/0000000007441.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/11/0000000007441.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F13%2F0000000007089.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/13/0000000007089.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F13%2F0000000007089.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/93/P5086757_Protomya macilenta 800x600.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/93/P5086757_Protomya macilenta 800x600.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F16%2F0000000007435.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/16/0000000007435.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F16%2F0000000007435.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/52/0000000006020.jpg" />
+          <button onclick="removeThumbnails('http://www.geo-coll.ethz.ch/look_eth2/file/image/52/0000000006020.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F47%2FIMG_7619_small.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/47/IMG_7619_small.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F47%2FIMG_7619_small.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05296__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_05296__et_Aktinolith.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2008_05296__et_Aktinolith.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F95%2FBibio%20fusiformis.JPG" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/95/Bibio fusiformis.JPG" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F95%2FBibio%20fusiformis.JPG')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05188__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_05188__et_Aktinolith.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2008_05188__et_Aktinolith.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F91%2FBibio%20brevis.JPG" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/91/Bibio brevis.JPG" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F91%2FBibio%20brevis.JPG')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2001_4110__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2001_4110__et_Aktinolith.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2001_4110__et_Aktinolith.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F102%2F0000000002840.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/102/0000000002840.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F102%2F0000000002840.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2002_0897__Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2002_0897__Argentit.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2002_0897__Argentit.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F103%2F0000000002841.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/103/0000000002841.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F103%2F0000000002841.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00054__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_00054__et_Argentit.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2011_00054__et_Argentit.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F105%2F0000000002843.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/105/0000000002843.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F105%2F0000000002843.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_00049__et_Argentit.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2011_00049__et_Argentit.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F18%2F5431%20Millericrinus%20nodotianus_72dpi.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/18/5431 Millericrinus nodotianus_72dpi.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F18%2F5431%20Millericrinus%20nodotianus_72dpi.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_6859__et_Argentit.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2005_6859__et_Argentit.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F100%2FCarcharodon%20escheri.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/100/Carcharodon escheri.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F100%2FCarcharodon%20escheri.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_7736__et_Argentit.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2000_7736__et_Argentit.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F98%2FCarcharodon%20polygyrus%20Agassiz.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/98/Carcharodon polygyrus Agassiz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F98%2FCarcharodon%20polygyrus%20Agassiz.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1998_4763__Argentit.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_1998_4763__Argentit.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/17/0000000007809.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F17%2F0000000007809.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_5575__et_Argentit.jpg" />
+          <button onclick="removeThumbnails('http://coll.mfn-berlin.de/img/MFN_MIN_2005_5575__et_Argentit.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/15/0000000007719.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F15%2F0000000007719.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" title="Original url:https://files.geocollections.info/medium/4a/09/4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/4a/09/4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/11/0000000007441.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F11%2F0000000007441.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg" title="Original url:https://files.geocollections.info/medium/e1/cf/e1cf09a2-8d9a-4503-a42b-539b04945756.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/e1/cf/e1cf09a2-8d9a-4503-a42b-539b04945756.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/93/P5086757_Protomya macilenta 800x600.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F93%2FP5086757_Protomya%20macilenta%20800x600.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" title="Original url:https://files.geocollections.info/medium/9b/ac/9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/9b/ac/9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg" title="Original url:http://www.geo-coll.ethz.ch/look_eth2/file/image/52/0000000006020.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F52%2F0000000006020.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg" title="Original url:https://files.geocollections.info/medium/ae/73/ae73096e-4540-4321-b25f-ea1d7a31634d.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/ae/73/ae73096e-4540-4321-b25f-ea1d7a31634d.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03709__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_03709__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03709__et_AlkalifeldspatSyenit.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" title="Original url:https://files.geocollections.info/medium/1c/1d/1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/1c/1d/1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00715__et_AlkalifeldspatRhyolit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00715__et_AlkalifeldspatRhyolit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00715__et_AlkalifeldspatRhyolit.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff9%2Fc7%2Ff9c7d2bb-fb1c-43ac-93b2-21520573ced7.jpg" title="Original url:https://files.geocollections.info/medium/f9/c7/f9c7d2bb-fb1c-43ac-93b2-21520573ced7.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/f9/c7/f9c7d2bb-fb1c-43ac-93b2-21520573ced7.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00714__et_AlkalifeldspatRhyolit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00714__et_AlkalifeldspatRhyolit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00714__et_AlkalifeldspatRhyolit.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F95%2F1a%2F951a024c-608e-47d5-ba62-ddec84586971.jpg" title="Original url:https://files.geocollections.info/medium/95/1a/951a024c-608e-47d5-ba62-ddec84586971.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/95/1a/951a024c-608e-47d5-ba62-ddec84586971.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00707__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00707__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00707__et_AlkalifeldspatSyenit.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F08%2Ff3%2F08f31fb8-87dc-4e14-926a-a0b4ca15a417.jpg" title="Original url:https://files.geocollections.info/medium/08/f3/08f31fb8-87dc-4e14-926a-a0b4ca15a417.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/08/f3/08f31fb8-87dc-4e14-926a-a0b4ca15a417.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00705__et_AlkalifeldspatGranit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00705__et_AlkalifeldspatGranit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00705__et_AlkalifeldspatGranit.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fde%2F71%2Fde7150c0-bd16-4608-8519-8fe2bde191cc.jpg" title="Original url:https://files.geocollections.info/medium/de/71/de7150c0-bd16-4608-8519-8fe2bde191cc.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/de/71/de7150c0-bd16-4608-8519-8fe2bde191cc.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00697__et_AlkalifeldspatRhyolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00697__et_AlkalifeldspatRhyolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00697__et_AlkalifeldspatRhyolith.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fdf%2Ff1%2Fdff1fa2c-91e3-4e2d-aac2-1d084be9bec1.jpg" title="Original url:https://files.geocollections.info/medium/df/f1/dff1fa2c-91e3-4e2d-aac2-1d084be9bec1.jpg" />
+          <button onclick="removeThumbnails('https://files.geocollections.info/medium/df/f1/dff1fa2c-91e3-4e2d-aac2-1d084be9bec1.jpg')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00696__et_AlkalifeldspatRhyolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00696__et_AlkalifeldspatRhyolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00696__et_AlkalifeldspatRhyolith.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24794" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24794')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00693__et_AlkalifeldspatRhyolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00693__et_AlkalifeldspatRhyolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00693__et_AlkalifeldspatRhyolith.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29548" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29548')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00687__et_Syenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00687__et_Syenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00687__et_Syenit.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29159" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29159')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2011_03795__et_AlkalifeldspatRhyolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2011_03795__et_AlkalifeldspatRhyolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2011_03795__et_AlkalifeldspatRhyolith.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24792" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24792')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00471__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00471__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00471__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF31672" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF31672')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00468__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00468__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00468__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF32322" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF32322" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF32322')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00465__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00465__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00465__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF1035952" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF1035952" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF1035952')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00463__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00463__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00463__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29547" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29547" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29547')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00455__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00455__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00455__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29008" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29008" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29008')">Delete</button>
         </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00454__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00454__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00454__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00452__et_and00453_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00452__et_and00453_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00452__et_and00453_AlkalifeldspatTrachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00447__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00447__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00447__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00440__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00440__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00440__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00439__et_Trachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00439__et_Trachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00439__et_Trachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00424__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00424__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00424__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00141__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00141__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00141__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03623__et_and03624_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_03623__et_and03624_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03623__et_and03624_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03668__et_Alkalifeldspatsyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_03668__et_Alkalifeldspatsyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03668__et_Alkalifeldspatsyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03667__et_Alkalifeldspatsyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_03667__et_Alkalifeldspatsyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03667__et_Alkalifeldspatsyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03665__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_03665__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03665__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03663__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_03663__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03663__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03662__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_03662__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_03662__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00216__et_Phonolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_00216__et_Phonolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00216__et_Phonolith.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00056__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_00056__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00056__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00049__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_00049__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00049__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00046__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_00046__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00046__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00506__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00506__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00506__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00492__et_Trachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_00492__et_Trachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_00492__et_Trachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00010__et_AlkalifeldspatTrachyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_00010__et_AlkalifeldspatTrachyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_00010__et_AlkalifeldspatTrachyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_02792__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_02792__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_02792__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_02791__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_02791__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_02791__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_02784__et_AlkalifeldspatSyenit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2012_02784__et_AlkalifeldspatSyenit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2012_02784__et_AlkalifeldspatSyenit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_02117__et_Albitit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2013_02117__et_Albitit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2013_02117__et_Albitit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09324__et_Plagioklas.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09324__et_Plagioklas.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09324__et_Plagioklas.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09320__et_Plagioklas.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09320__et_Plagioklas.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09320__et_Plagioklas.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2007_08956__et_Plagioklas.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2007_08956__et_Plagioklas.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2007_08956__et_Plagioklas.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_08939__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_08939__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_08939__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_5016__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1999_5016__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_5016__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09205__et_Opal.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09205__et_Opal.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09205__et_Opal.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09192__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09192__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09192__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09186__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09186__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09186__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09185__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09185__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09185__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09166__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09166__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09166__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2003_5966__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2003_5966__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2003_5966__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09138__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09138__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09138__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09135__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09135__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09135__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09132__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_09132__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_09132__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2012_02322__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2012_02322__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2012_02322__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2004_3144__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2004_3144__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2004_3144__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2004_3133__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2004_3133__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2004_3133__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03116__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_03116__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03116__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03111__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_03111__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03111__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03098__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_03098__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03098__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_00938__et_Albit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_00938__et_Albit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_00938__et_Albit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_4627__et_Alaun.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1999_4627__et_Alaun.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_4627__et_Alaun.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_4601__et_Alaun.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1999_4601__et_Alaun.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_4601__et_Alaun.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_2037__et_Alabandin.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1999_2037__et_Alabandin.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_2037__et_Alabandin.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_9072__et_Nephrit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_9072__et_Nephrit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_9072__et_Nephrit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_3925__et_Nephrit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1998_3925__et_Nephrit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_3925__et_Nephrit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2002_1111__et_Nephrit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2002_1111__et_Nephrit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2002_1111__et_Nephrit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03428__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03428__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03428__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03425__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03425__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03425__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03423__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03423__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03423__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03417__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03417__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03417__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03406__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03406__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03406__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03405__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03405__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03405__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03404__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03404__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03404__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03400__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03400__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03400__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03386__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2014_03386__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2014_03386__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2009_05038__et_and05039_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_PET_2009_05038__et_and05039_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_PET_2009_05038__et_and05039_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4764__Akanthit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1998_4764__Akanthit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4764__Akanthit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2002_4757__et_Silberglanz.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2002_4757__et_Silberglanz.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2002_4757__et_Silberglanz.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2014_03038__et_Aikinit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2014_03038__et_Aikinit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2014_03038__et_Aikinit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1997_0102__Agrellit_Eudialyt.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1997_0102__Agrellit_Eudialyt.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1997_0102__Agrellit_Eudialyt.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_5652__Agardit_Detail.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1999_5652__Agardit_Detail.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_5652__Agardit_Detail.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_2537__et_Aeschynit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_2537__et_Aeschynit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_2537__et_Aeschynit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_2520__Aeschynit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_2520__Aeschynit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_2520__Aeschynit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03175__et_Akmit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_03175__et_Akmit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_03175__et_Akmit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_4902__Adamin.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1999_4902__Adamin.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1999_4902__Adamin.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05543__et_Amphibol.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_05543__et_Amphibol.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05543__et_Amphibol.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05542__et_Amphibol.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_05542__et_Amphibol.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05542__et_Amphibol.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2007_02712__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2007_02712__et_Aktinolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2007_02712__et_Aktinolith.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2007_02709__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2007_02709__et_Aktinolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2007_02709__et_Aktinolith.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2013_03084__et_Amphibol.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2013_03084__et_Amphibol.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2013_03084__et_Amphibol.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05296__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_05296__et_Aktinolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05296__et_Aktinolith.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05188__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2008_05188__et_Aktinolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2008_05188__et_Aktinolith.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2001_4110__et_Aktinolith.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2001_4110__et_Aktinolith.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2001_4110__et_Aktinolith.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2002_0897__Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2002_0897__Argentit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2002_0897__Argentit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00054__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_00054__et_Argentit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00054__et_Argentit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2011_00049__et_Argentit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_6859__et_Argentit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_6859__et_Argentit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2000_7736__et_Argentit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2000_7736__et_Argentit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_1998_4763__Argentit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_1998_4763__Argentit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg" title="Original url:http://coll.mfn-berlin.de/img/MFN_MIN_2005_5575__et_Argentit.jpg" />
-          <button onclick="removeThumbnails('http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2005_5575__et_Argentit.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" title="Original url:https://files.geocollections.info/medium/4a/09/4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2F09%2F4a095dbc-c99c-49cc-9f01-6e1c15fc76c9.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg" title="Original url:https://files.geocollections.info/medium/e1/cf/e1cf09a2-8d9a-4503-a42b-539b04945756.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe1%2Fcf%2Fe1cf09a2-8d9a-4503-a42b-539b04945756.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" title="Original url:https://files.geocollections.info/medium/9b/ac/9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9b%2Fac%2F9bac7265-953e-4cbc-bb9c-5a22f1e021e1.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg" title="Original url:https://files.geocollections.info/medium/ae/73/ae73096e-4540-4321-b25f-ea1d7a31634d.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fae%2F73%2Fae73096e-4540-4321-b25f-ea1d7a31634d.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" title="Original url:https://files.geocollections.info/medium/1c/1d/1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F1d%2F1c1dbff7-28a7-4e9f-8480-59d00868ce2b.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff9%2Fc7%2Ff9c7d2bb-fb1c-43ac-93b2-21520573ced7.jpg" title="Original url:https://files.geocollections.info/medium/f9/c7/f9c7d2bb-fb1c-43ac-93b2-21520573ced7.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff9%2Fc7%2Ff9c7d2bb-fb1c-43ac-93b2-21520573ced7.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F95%2F1a%2F951a024c-608e-47d5-ba62-ddec84586971.jpg" title="Original url:https://files.geocollections.info/medium/95/1a/951a024c-608e-47d5-ba62-ddec84586971.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F95%2F1a%2F951a024c-608e-47d5-ba62-ddec84586971.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F08%2Ff3%2F08f31fb8-87dc-4e14-926a-a0b4ca15a417.jpg" title="Original url:https://files.geocollections.info/medium/08/f3/08f31fb8-87dc-4e14-926a-a0b4ca15a417.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F08%2Ff3%2F08f31fb8-87dc-4e14-926a-a0b4ca15a417.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fde%2F71%2Fde7150c0-bd16-4608-8519-8fe2bde191cc.jpg" title="Original url:https://files.geocollections.info/medium/de/71/de7150c0-bd16-4608-8519-8fe2bde191cc.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fde%2F71%2Fde7150c0-bd16-4608-8519-8fe2bde191cc.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fdf%2Ff1%2Fdff1fa2c-91e3-4e2d-aac2-1d084be9bec1.jpg" title="Original url:https://files.geocollections.info/medium/df/f1/dff1fa2c-91e3-4e2d-aac2-1d084be9bec1.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fdf%2Ff1%2Fdff1fa2c-91e3-4e2d-aac2-1d084be9bec1.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F67%2Fef%2F67ef13e5-6347-414c-9707-2c3b6e2501dd.jpg" title="Original url:https://files.geocollections.info/medium/67/ef/67ef13e5-6347-414c-9707-2c3b6e2501dd.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F67%2Fef%2F67ef13e5-6347-414c-9707-2c3b6e2501dd.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F50%2F8b%2F508bf3c8-752e-48ff-b72c-2d34578e71fb.jpg" title="Original url:https://files.geocollections.info/medium/50/8b/508bf3c8-752e-48ff-b72c-2d34578e71fb.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F50%2F8b%2F508bf3c8-752e-48ff-b72c-2d34578e71fb.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fac%2F3a%2Fac3ad8d1-506d-4d30-b3a6-2b394e1e1d6b.jpg" title="Original url:https://files.geocollections.info/medium/ac/3a/ac3ad8d1-506d-4d30-b3a6-2b394e1e1d6b.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fac%2F3a%2Fac3ad8d1-506d-4d30-b3a6-2b394e1e1d6b.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9f%2F11%2F9f117dbb-a373-4253-b9f6-47bd5d116009.jpg" title="Original url:https://files.geocollections.info/medium/9f/11/9f117dbb-a373-4253-b9f6-47bd5d116009.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9f%2F11%2F9f117dbb-a373-4253-b9f6-47bd5d116009.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4f%2F85%2F4f851199-223a-45d1-9267-631143b7a763.jpg" title="Original url:https://files.geocollections.info/medium/4f/85/4f851199-223a-45d1-9267-631143b7a763.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4f%2F85%2F4f851199-223a-45d1-9267-631143b7a763.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F20%2F16%2F2016ca9e-ac11-431e-a874-468e6302fa8c.jpg" title="Original url:https://files.geocollections.info/medium/20/16/2016ca9e-ac11-431e-a874-468e6302fa8c.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F20%2F16%2F2016ca9e-ac11-431e-a874-468e6302fa8c.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc1%2F43%2Fc143eb10-95fd-4352-a89b-9db895c1f10c.jpg" title="Original url:https://files.geocollections.info/medium/c1/43/c143eb10-95fd-4352-a89b-9db895c1f10c.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc1%2F43%2Fc143eb10-95fd-4352-a89b-9db895c1f10c.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F20%2F00%2F200026c1-71e3-4ac9-af5a-021d92717dd6.jpg" title="Original url:https://files.geocollections.info/medium/20/00/200026c1-71e3-4ac9-af5a-021d92717dd6.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F20%2F00%2F200026c1-71e3-4ac9-af5a-021d92717dd6.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F7c%2F94%2F7c9435bf-d4c3-4370-a1c5-d81b309a2dec.jpg" title="Original url:https://files.geocollections.info/medium/7c/94/7c9435bf-d4c3-4370-a1c5-d81b309a2dec.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F7c%2F94%2F7c9435bf-d4c3-4370-a1c5-d81b309a2dec.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd8%2Ffe%2Fd8fe877c-613c-4fac-9f6c-26383c8119bb.jpg" title="Original url:https://files.geocollections.info/medium/d8/fe/d8fe877c-613c-4fac-9f6c-26383c8119bb.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd8%2Ffe%2Fd8fe877c-613c-4fac-9f6c-26383c8119bb.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F25%2F53%2F255342e3-bb34-4b0c-a81c-041d81e4c902.jpg" title="Original url:https://files.geocollections.info/medium/25/53/255342e3-bb34-4b0c-a81c-041d81e4c902.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F25%2F53%2F255342e3-bb34-4b0c-a81c-041d81e4c902.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9c%2Fd5%2F9cd53c7e-4a17-4de6-9259-41c0fe138f1d.jpg" title="Original url:https://files.geocollections.info/medium/9c/d5/9cd53c7e-4a17-4de6-9259-41c0fe138f1d.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9c%2Fd5%2F9cd53c7e-4a17-4de6-9259-41c0fe138f1d.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fca%2Fee%2Fcaee9bf6-4e2c-4722-9b68-a35f6bbe7513.jpg" title="Original url:https://files.geocollections.info/medium/ca/ee/caee9bf6-4e2c-4722-9b68-a35f6bbe7513.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fca%2Fee%2Fcaee9bf6-4e2c-4722-9b68-a35f6bbe7513.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fca%2Ff8%2Fcaf8b648-69b1-47f8-a61e-24dbff749a6c.jpg" title="Original url:https://files.geocollections.info/medium/ca/f8/caf8b648-69b1-47f8-a61e-24dbff749a6c.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fca%2Ff8%2Fcaf8b648-69b1-47f8-a61e-24dbff749a6c.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff4%2Ffc%2Ff4fc73bd-955d-4a36-a7d4-3d8a6e2df048.jpg" title="Original url:https://files.geocollections.info/medium/f4/fc/f4fc73bd-955d-4a36-a7d4-3d8a6e2df048.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff4%2Ffc%2Ff4fc73bd-955d-4a36-a7d4-3d8a6e2df048.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fa7%2Fa7%2Fa7a7b961-e3c9-4d8b-847f-76eb118747b3.jpg" title="Original url:https://files.geocollections.info/medium/a7/a7/a7a7b961-e3c9-4d8b-847f-76eb118747b3.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fa7%2Fa7%2Fa7a7b961-e3c9-4d8b-847f-76eb118747b3.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3f%2F79%2F3f7913c9-7fa0-4db1-940a-cbc2ec71ff19.jpg" title="Original url:https://files.geocollections.info/medium/3f/79/3f7913c9-7fa0-4db1-940a-cbc2ec71ff19.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3f%2F79%2F3f7913c9-7fa0-4db1-940a-cbc2ec71ff19.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F89%2F91%2F8991ffed-46a4-43b7-8f66-f42d25fd36eb.jpg" title="Original url:https://files.geocollections.info/medium/89/91/8991ffed-46a4-43b7-8f66-f42d25fd36eb.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F89%2F91%2F8991ffed-46a4-43b7-8f66-f42d25fd36eb.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F0e%2F32%2F0e321305-edca-41f6-b9f0-887ddb22a07a.jpg" title="Original url:https://files.geocollections.info/medium/0e/32/0e321305-edca-41f6-b9f0-887ddb22a07a.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F0e%2F32%2F0e321305-edca-41f6-b9f0-887ddb22a07a.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ffb%2F5c%2Ffb5c7d94-0a47-40c0-9b42-52694e638554.jpg" title="Original url:https://files.geocollections.info/medium/fb/5c/fb5c7d94-0a47-40c0-9b42-52694e638554.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ffb%2F5c%2Ffb5c7d94-0a47-40c0-9b42-52694e638554.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F57%2F7e%2F577e6c39-9bef-461e-a3cc-b88a7bee99e4.jpg" title="Original url:https://files.geocollections.info/medium/57/7e/577e6c39-9bef-461e-a3cc-b88a7bee99e4.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F57%2F7e%2F577e6c39-9bef-461e-a3cc-b88a7bee99e4.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F05%2Fa0%2F05a020bf-5ce8-4661-8eb5-113ade3f157f.jpg" title="Original url:https://files.geocollections.info/medium/05/a0/05a020bf-5ce8-4661-8eb5-113ade3f157f.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F05%2Fa0%2F05a020bf-5ce8-4661-8eb5-113ade3f157f.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fea%2Ff1%2Feaf16e25-16f5-4a98-bc7e-93e62f0a998f.jpg" title="Original url:https://files.geocollections.info/medium/ea/f1/eaf16e25-16f5-4a98-bc7e-93e62f0a998f.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fea%2Ff1%2Feaf16e25-16f5-4a98-bc7e-93e62f0a998f.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F39%2F67%2F39672d30-47ec-4a17-8339-d87675934427.jpg" title="Original url:https://files.geocollections.info/medium/39/67/39672d30-47ec-4a17-8339-d87675934427.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F39%2F67%2F39672d30-47ec-4a17-8339-d87675934427.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3c%2F8a%2F3c8a74f3-f3d8-4f78-803b-5cd4172f59c0.jpg" title="Original url:https://files.geocollections.info/medium/3c/8a/3c8a74f3-f3d8-4f78-803b-5cd4172f59c0.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3c%2F8a%2F3c8a74f3-f3d8-4f78-803b-5cd4172f59c0.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F39%2F8f%2F398f35d8-b0c5-4300-9c10-e9e84eccb45b.jpg" title="Original url:https://files.geocollections.info/medium/39/8f/398f35d8-b0c5-4300-9c10-e9e84eccb45b.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F39%2F8f%2F398f35d8-b0c5-4300-9c10-e9e84eccb45b.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9e%2F87%2F9e87fbd3-fdd4-44b4-8768-0ff7ebf98394.jpg" title="Original url:https://files.geocollections.info/medium/9e/87/9e87fbd3-fdd4-44b4-8768-0ff7ebf98394.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9e%2F87%2F9e87fbd3-fdd4-44b4-8768-0ff7ebf98394.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe3%2Fba%2Fe3ba9d88-15c9-42b2-affd-1db7beea953d.jpg" title="Original url:https://files.geocollections.info/medium/e3/ba/e3ba9d88-15c9-42b2-affd-1db7beea953d.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe3%2Fba%2Fe3ba9d88-15c9-42b2-affd-1db7beea953d.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff0%2Fa5%2Ff0a5c3fd-a483-4634-b0dd-79a9eb7e2cde.jpg" title="Original url:https://files.geocollections.info/medium/f0/a5/f0a5c3fd-a483-4634-b0dd-79a9eb7e2cde.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff0%2Fa5%2Ff0a5c3fd-a483-4634-b0dd-79a9eb7e2cde.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F76%2F08%2F7608dbf7-80d6-4d4f-909a-41f30ef902c7.jpg" title="Original url:https://files.geocollections.info/medium/76/08/7608dbf7-80d6-4d4f-909a-41f30ef902c7.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F76%2F08%2F7608dbf7-80d6-4d4f-909a-41f30ef902c7.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd8%2F5c%2Fd85c88fb-183d-4950-b9b1-d08fd4663fbc.jpg" title="Original url:https://files.geocollections.info/medium/d8/5c/d85c88fb-183d-4950-b9b1-d08fd4663fbc.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd8%2F5c%2Fd85c88fb-183d-4950-b9b1-d08fd4663fbc.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F67%2Fb4%2F67b48162-fe4a-473d-a8f0-aa2975b1e9c5.jpg" title="Original url:https://files.geocollections.info/medium/67/b4/67b48162-fe4a-473d-a8f0-aa2975b1e9c5.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F67%2Fb4%2F67b48162-fe4a-473d-a8f0-aa2975b1e9c5.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F95%2Fee%2F95ee2feb-ecd5-4749-ae0b-dd95732b85a5.jpg" title="Original url:https://files.geocollections.info/medium/95/ee/95ee2feb-ecd5-4749-ae0b-dd95732b85a5.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F95%2Fee%2F95ee2feb-ecd5-4749-ae0b-dd95732b85a5.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fb0%2Fb3%2Fb0b3afe4-4648-494a-a811-913a20289406.jpg" title="Original url:https://files.geocollections.info/medium/b0/b3/b0b3afe4-4648-494a-a811-913a20289406.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fb0%2Fb3%2Fb0b3afe4-4648-494a-a811-913a20289406.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd8%2F9c%2Fd89c4b10-9a1a-445c-9f69-84b8c41fd62d.jpg" title="Original url:https://files.geocollections.info/medium/d8/9c/d89c4b10-9a1a-445c-9f69-84b8c41fd62d.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd8%2F9c%2Fd89c4b10-9a1a-445c-9f69-84b8c41fd62d.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F8a%2Fc4%2F8ac4bc51-35f9-446a-8186-079b3daed654.jpg" title="Original url:https://files.geocollections.info/medium/8a/c4/8ac4bc51-35f9-446a-8186-079b3daed654.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F8a%2Fc4%2F8ac4bc51-35f9-446a-8186-079b3daed654.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F2e%2F2d%2F2e2d8b9b-5a16-4601-a313-e5394eba0c09.jpg" title="Original url:https://files.geocollections.info/medium/2e/2d/2e2d8b9b-5a16-4601-a313-e5394eba0c09.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F2e%2F2d%2F2e2d8b9b-5a16-4601-a313-e5394eba0c09.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd4%2F4c%2Fd44cb462-37ba-4ad8-81fe-7fecbd5b62dc.jpg" title="Original url:https://files.geocollections.info/medium/d4/4c/d44cb462-37ba-4ad8-81fe-7fecbd5b62dc.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fd4%2F4c%2Fd44cb462-37ba-4ad8-81fe-7fecbd5b62dc.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fa8%2F46%2Fa8468375-b3d7-495c-9eaa-bf7ad14e924a.jpg" title="Original url:https://files.geocollections.info/medium/a8/46/a8468375-b3d7-495c-9eaa-bf7ad14e924a.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fa8%2F46%2Fa8468375-b3d7-495c-9eaa-bf7ad14e924a.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F12%2Fca%2F12caf523-b7c0-4808-bb50-d9820a957bb5.jpg" title="Original url:https://files.geocollections.info/medium/12/ca/12caf523-b7c0-4808-bb50-d9820a957bb5.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F12%2Fca%2F12caf523-b7c0-4808-bb50-d9820a957bb5.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2Ff5%2F4af5d201-df67-45ce-b6aa-b1b27a2d2ad6.jpg" title="Original url:https://files.geocollections.info/medium/4a/f5/4af5d201-df67-45ce-b6aa-b1b27a2d2ad6.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4a%2Ff5%2F4af5d201-df67-45ce-b6aa-b1b27a2d2ad6.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fbe%2F8f%2Fbe8fe5f3-5b0e-46d3-92fb-6737f9bdb863.jpg" title="Original url:https://files.geocollections.info/medium/be/8f/be8fe5f3-5b0e-46d3-92fb-6737f9bdb863.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fbe%2F8f%2Fbe8fe5f3-5b0e-46d3-92fb-6737f9bdb863.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fab%2Ff3%2Fabf3ab44-dd8c-4cae-8464-a4fdca825eca.jpg" title="Original url:https://files.geocollections.info/medium/ab/f3/abf3ab44-dd8c-4cae-8464-a4fdca825eca.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fab%2Ff3%2Fabf3ab44-dd8c-4cae-8464-a4fdca825eca.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F5e%2F1c5ebdf3-842e-45f9-91c6-e74bac14dd39.jpg" title="Original url:https://files.geocollections.info/medium/1c/5e/1c5ebdf3-842e-45f9-91c6-e74bac14dd39.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1c%2F5e%2F1c5ebdf3-842e-45f9-91c6-e74bac14dd39.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F84%2Fdd%2F84dd20e3-82dd-4cef-9955-7afcdd3f939a.jpg" title="Original url:https://files.geocollections.info/medium/84/dd/84dd20e3-82dd-4cef-9955-7afcdd3f939a.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F84%2Fdd%2F84dd20e3-82dd-4cef-9955-7afcdd3f939a.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff7%2F1c%2Ff71c56a8-6d1b-4156-bdfb-0320a8ffae52.jpg" title="Original url:https://files.geocollections.info/medium/f7/1c/f71c56a8-6d1b-4156-bdfb-0320a8ffae52.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff7%2F1c%2Ff71c56a8-6d1b-4156-bdfb-0320a8ffae52.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff0%2F2a%2Ff02ad1e3-d0a8-4427-903f-0a04e1b888a0.jpg" title="Original url:https://files.geocollections.info/medium/f0/2a/f02ad1e3-d0a8-4427-903f-0a04e1b888a0.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff0%2F2a%2Ff02ad1e3-d0a8-4427-903f-0a04e1b888a0.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fef%2Ffa%2Feffad2ba-c5b7-4a1b-b6f6-44bd31eae660.jpg" title="Original url:https://files.geocollections.info/medium/ef/fa/effad2ba-c5b7-4a1b-b6f6-44bd31eae660.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fef%2Ffa%2Feffad2ba-c5b7-4a1b-b6f6-44bd31eae660.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F2b%2F86%2F2b86a321-1445-4ae7-a5cd-759957558675.jpg" title="Original url:https://files.geocollections.info/medium/2b/86/2b86a321-1445-4ae7-a5cd-759957558675.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F2b%2F86%2F2b86a321-1445-4ae7-a5cd-759957558675.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F0b%2F1c%2F0b1c5ff5-223b-4151-b2a8-24a56bd2f56d.jpg" title="Original url:https://files.geocollections.info/medium/0b/1c/0b1c5ff5-223b-4151-b2a8-24a56bd2f56d.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F0b%2F1c%2F0b1c5ff5-223b-4151-b2a8-24a56bd2f56d.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc8%2F93%2Fc8936074-63b0-4398-8300-26ce26761120.jpg" title="Original url:https://files.geocollections.info/medium/c8/93/c8936074-63b0-4398-8300-26ce26761120.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc8%2F93%2Fc8936074-63b0-4398-8300-26ce26761120.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fa0%2F06%2Fa00647d3-2bae-4482-801b-e129e1b70afe.jpg" title="Original url:https://files.geocollections.info/medium/a0/06/a00647d3-2bae-4482-801b-e129e1b70afe.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fa0%2F06%2Fa00647d3-2bae-4482-801b-e129e1b70afe.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc6%2F16%2Fc616182f-0908-4783-a80f-a957adbe9a61.jpg" title="Original url:https://files.geocollections.info/medium/c6/16/c616182f-0908-4783-a80f-a957adbe9a61.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc6%2F16%2Fc616182f-0908-4783-a80f-a957adbe9a61.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F8c%2F4e%2F8c4e5203-6c93-408d-bb18-b48029c6d196.jpg" title="Original url:https://files.geocollections.info/medium/8c/4e/8c4e5203-6c93-408d-bb18-b48029c6d196.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F8c%2F4e%2F8c4e5203-6c93-408d-bb18-b48029c6d196.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F99%2F9e%2F999eebb4-7778-4f85-8e40-cdad2824423e.jpg" title="Original url:https://files.geocollections.info/medium/99/9e/999eebb4-7778-4f85-8e40-cdad2824423e.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F99%2F9e%2F999eebb4-7778-4f85-8e40-cdad2824423e.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1e%2F41%2F1e41be7d-9fde-46c5-9dc5-e5bebd61d15c.jpg" title="Original url:https://files.geocollections.info/medium/1e/41/1e41be7d-9fde-46c5-9dc5-e5bebd61d15c.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F1e%2F41%2F1e41be7d-9fde-46c5-9dc5-e5bebd61d15c.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fbf%2F70%2Fbf70df89-7042-4d63-a208-55917241d128.jpg" title="Original url:https://files.geocollections.info/medium/bf/70/bf70df89-7042-4d63-a208-55917241d128.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fbf%2F70%2Fbf70df89-7042-4d63-a208-55917241d128.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc6%2F63%2Fc66313d3-94e5-4960-a599-a666d98bbb32.jpg" title="Original url:https://files.geocollections.info/medium/c6/63/c66313d3-94e5-4960-a599-a666d98bbb32.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc6%2F63%2Fc66313d3-94e5-4960-a599-a666d98bbb32.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F27%2Fdd%2F27ddbf77-79c0-46fb-af58-f1975a648459.jpg" title="Original url:https://files.geocollections.info/medium/27/dd/27ddbf77-79c0-46fb-af58-f1975a648459.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F27%2Fdd%2F27ddbf77-79c0-46fb-af58-f1975a648459.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9d%2F44%2F9d44eb3a-4e3a-4a00-8579-f2ef0c1f9237.jpg" title="Original url:https://files.geocollections.info/medium/9d/44/9d44eb3a-4e3a-4a00-8579-f2ef0c1f9237.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F9d%2F44%2F9d44eb3a-4e3a-4a00-8579-f2ef0c1f9237.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc8%2F56%2Fc856ff6c-b10a-4c1e-b4fa-5871ec8b600b.jpg" title="Original url:https://files.geocollections.info/medium/c8/56/c856ff6c-b10a-4c1e-b4fa-5871ec8b600b.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc8%2F56%2Fc856ff6c-b10a-4c1e-b4fa-5871ec8b600b.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3a%2F38%2F3a385a66-fbc8-425d-a383-c98833f5e4a7.jpg" title="Original url:https://files.geocollections.info/medium/3a/38/3a385a66-fbc8-425d-a383-c98833f5e4a7.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3a%2F38%2F3a385a66-fbc8-425d-a383-c98833f5e4a7.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F34%2Fef%2F34ef8955-0ffe-4d97-ad50-18d2e557a4ea.jpg" title="Original url:https://files.geocollections.info/medium/34/ef/34ef8955-0ffe-4d97-ad50-18d2e557a4ea.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F34%2Fef%2F34ef8955-0ffe-4d97-ad50-18d2e557a4ea.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fdf%2Fe2%2Fdfe25e5b-7c00-41a5-a243-3ca836abef8f.jpg" title="Original url:https://files.geocollections.info/medium/df/e2/dfe25e5b-7c00-41a5-a243-3ca836abef8f.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fdf%2Fe2%2Fdfe25e5b-7c00-41a5-a243-3ca836abef8f.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc6%2F37%2Fc6374772-d178-4256-bab0-b859a2733160.jpg" title="Original url:https://files.geocollections.info/medium/c6/37/c6374772-d178-4256-bab0-b859a2733160.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc6%2F37%2Fc6374772-d178-4256-bab0-b859a2733160.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F7a%2Fa2%2F7aa235b9-5920-4315-b99f-e4297972afa9.jpg" title="Original url:https://files.geocollections.info/medium/7a/a2/7aa235b9-5920-4315-b99f-e4297972afa9.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F7a%2Fa2%2F7aa235b9-5920-4315-b99f-e4297972afa9.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F01%2Fea%2F01eac9ff-ae0d-4bd9-aacf-1bc8a6556a9b.jpg" title="Original url:https://files.geocollections.info/medium/01/ea/01eac9ff-ae0d-4bd9-aacf-1bc8a6556a9b.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F01%2Fea%2F01eac9ff-ae0d-4bd9-aacf-1bc8a6556a9b.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F6a%2F70%2F6a705be6-bf2a-4420-ac67-0b5b7e685a00.jpg" title="Original url:https://files.geocollections.info/medium/6a/70/6a705be6-bf2a-4420-ac67-0b5b7e685a00.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F6a%2F70%2F6a705be6-bf2a-4420-ac67-0b5b7e685a00.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3d%2F57%2F3d5726b8-9778-42a1-9067-beff8f4fff19.jpg" title="Original url:https://files.geocollections.info/medium/3d/57/3d5726b8-9778-42a1-9067-beff8f4fff19.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3d%2F57%2F3d5726b8-9778-42a1-9067-beff8f4fff19.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F6f%2Ff2%2F6ff21f4e-ab54-42f4-a0bf-f6e1e75784f7.jpg" title="Original url:https://files.geocollections.info/medium/6f/f2/6ff21f4e-ab54-42f4-a0bf-f6e1e75784f7.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F6f%2Ff2%2F6ff21f4e-ab54-42f4-a0bf-f6e1e75784f7.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F2c%2Fc8%2F2cc8cd7e-de89-4146-807c-c1120bcdd852.jpg" title="Original url:https://files.geocollections.info/medium/2c/c8/2cc8cd7e-de89-4146-807c-c1120bcdd852.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F2c%2Fc8%2F2cc8cd7e-de89-4146-807c-c1120bcdd852.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F09%2Fe9%2F09e9e591-6792-41c5-a65e-5c9d07464bdd.jpg" title="Original url:https://files.geocollections.info/medium/09/e9/09e9e591-6792-41c5-a65e-5c9d07464bdd.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F09%2Fe9%2F09e9e591-6792-41c5-a65e-5c9d07464bdd.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F8a%2Faa%2F8aaa0003-1ac1-41cb-8665-a5ea9bff007d.jpg" title="Original url:https://files.geocollections.info/medium/8a/aa/8aaa0003-1ac1-41cb-8665-a5ea9bff007d.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F8a%2Faa%2F8aaa0003-1ac1-41cb-8665-a5ea9bff007d.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F5c%2F7c%2F5c7c3493-f179-4063-a0d6-c6e12d1f6300.jpg" title="Original url:https://files.geocollections.info/medium/5c/7c/5c7c3493-f179-4063-a0d6-c6e12d1f6300.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F5c%2F7c%2F5c7c3493-f179-4063-a0d6-c6e12d1f6300.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4f%2F82%2F4f82fc2c-4e18-4082-86d3-8b2e5eae6a98.jpg" title="Original url:https://files.geocollections.info/medium/4f/82/4f82fc2c-4e18-4082-86d3-8b2e5eae6a98.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F4f%2F82%2F4f82fc2c-4e18-4082-86d3-8b2e5eae6a98.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff0%2F17%2Ff017567a-d289-4019-b036-7a2314f1e58b.jpg" title="Original url:https://files.geocollections.info/medium/f0/17/f017567a-d289-4019-b036-7a2314f1e58b.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff0%2F17%2Ff017567a-d289-4019-b036-7a2314f1e58b.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc5%2Fb2%2Fc5b27866-7d38-4206-96fa-3dd157c10e78.jpg" title="Original url:https://files.geocollections.info/medium/c5/b2/c5b27866-7d38-4206-96fa-3dd157c10e78.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fc5%2Fb2%2Fc5b27866-7d38-4206-96fa-3dd157c10e78.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F25%2F5c%2F255cc783-18c1-48e5-a861-7bccbcb234ff.jpg" title="Original url:https://files.geocollections.info/medium/25/5c/255cc783-18c1-48e5-a861-7bccbcb234ff.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F25%2F5c%2F255cc783-18c1-48e5-a861-7bccbcb234ff.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F72%2F0a%2F720afb1a-c4ec-4fc2-aafc-b1d149d4280f.jpg" title="Original url:https://files.geocollections.info/medium/72/0a/720afb1a-c4ec-4fc2-aafc-b1d149d4280f.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F72%2F0a%2F720afb1a-c4ec-4fc2-aafc-b1d149d4280f.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F56%2Fc2%2F56c28c5e-828c-42e5-9482-fd51ac8effe7.jpg" title="Original url:https://files.geocollections.info/medium/56/c2/56c28c5e-828c-42e5-9482-fd51ac8effe7.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F56%2Fc2%2F56c28c5e-828c-42e5-9482-fd51ac8effe7.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F82%2F1b%2F821b8c79-465a-41ba-95bb-bfbacd04d57e.jpg" title="Original url:https://files.geocollections.info/medium/82/1b/821b8c79-465a-41ba-95bb-bfbacd04d57e.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F82%2F1b%2F821b8c79-465a-41ba-95bb-bfbacd04d57e.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F38%2F90%2F389027bb-b698-4c42-bf6d-28dccee279a0.jpg" title="Original url:https://files.geocollections.info/medium/38/90/389027bb-b698-4c42-bf6d-28dccee279a0.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F38%2F90%2F389027bb-b698-4c42-bf6d-28dccee279a0.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fb9%2F1e%2Fb91e5830-f901-4aa0-866e-a2798a355ab1.jpg" title="Original url:https://files.geocollections.info/medium/b9/1e/b91e5830-f901-4aa0-866e-a2798a355ab1.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fb9%2F1e%2Fb91e5830-f901-4aa0-866e-a2798a355ab1.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff8%2F55%2Ff8550a5b-a829-426d-a70f-c18cb47c7e2e.jpg" title="Original url:https://files.geocollections.info/medium/f8/55/f8550a5b-a829-426d-a70f-c18cb47c7e2e.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Ff8%2F55%2Ff8550a5b-a829-426d-a70f-c18cb47c7e2e.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe8%2F7c%2Fe87c9a94-bfb5-4c8b-b1d8-115008202e6c.jpg" title="Original url:https://files.geocollections.info/medium/e8/7c/e87c9a94-bfb5-4c8b-b1d8-115008202e6c.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fe8%2F7c%2Fe87c9a94-bfb5-4c8b-b1d8-115008202e6c.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F88%2F1e%2F881e3cbb-2928-48e4-9a91-a789304f0137.jpg" title="Original url:https://files.geocollections.info/medium/88/1e/881e3cbb-2928-48e4-9a91-a789304f0137.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F88%2F1e%2F881e3cbb-2928-48e4-9a91-a789304f0137.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F56%2Fc4%2F56c440db-ef9d-45c2-9d69-d81a736ee4fd.jpg" title="Original url:https://files.geocollections.info/medium/56/c4/56c440db-ef9d-45c2-9d69-d81a736ee4fd.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F56%2Fc4%2F56c440db-ef9d-45c2-9d69-d81a736ee4fd.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F83%2F8f%2F838f7584-4857-49a0-a1a4-f8218bc3c519.jpg" title="Original url:https://files.geocollections.info/medium/83/8f/838f7584-4857-49a0-a1a4-f8218bc3c519.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F83%2F8f%2F838f7584-4857-49a0-a1a4-f8218bc3c519.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fdb%2F39%2Fdb397c2d-7b1f-47cf-95f3-38d1e6b76728.jpg" title="Original url:https://files.geocollections.info/medium/db/39/db397c2d-7b1f-47cf-95f3-38d1e6b76728.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2Fdb%2F39%2Fdb397c2d-7b1f-47cf-95f3-38d1e6b76728.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3b%2F1a%2F3b1ab427-3048-4b3d-87a5-941f5130dcb2.jpg" title="Original url:https://files.geocollections.info/medium/3b/1a/3b1ab427-3048-4b3d-87a5-941f5130dcb2.jpg" />
-          <button onclick="removeThumbnails('https%3A%2F%2Ffiles.geocollections.info%2Fmedium%2F3b%2F1a%2F3b1ab427-3048-4b3d-87a5-941f5130dcb2.jpg')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24794" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24794')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29548" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29548')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29159" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29159')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF24792" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF24792')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF31672" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF31672')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF32322" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF32322" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF32322')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF1035952" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF1035952" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF1035952')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29547" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29547" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29547')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29008" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29008" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29008')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF30267" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF30267" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF30267')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF32740" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF32740" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF32740')">Delete</button>
-        </div><div class="thumb">
-          <img src="http://localhost:2020/thumbnail/https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29014" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF29014" />
-          <button onclick="removeThumbnails('https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF29014')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=https%3A%2F%2Fwww.nms.ac.uk%2Fsearch.axd%3Fcommand%3Dgetcontent%26server%3DDetail%26value%3DPF30267" title="Original url:https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF30267" />
+          <button onclick="removeThumbnails('https://www.nms.ac.uk/search.axd?command=getcontent&server=Detail&value=PF30267')">Delete</button>
         </div>
   </body>
 </html>

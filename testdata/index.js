@@ -4,9 +4,9 @@ var _ = require("lodash");
 console.log(__dirname);
 
 let list = [],
-  max_images_per_json = 5000;
+  max_images_per_json = 10;
 
-fs.readdirSync(`${__dirname}/json/`).forEach(file => {
+fs.readdirSync(`${__dirname}/json/`).forEach((file) => {
   const json = fs.readFileSync(`${__dirname}/json/${file}`);
   const data = JSON.parse(json);
   const docs = _.get(data, "response.docs");
@@ -22,7 +22,7 @@ fs.readdirSync(`${__dirname}/json/`).forEach(file => {
 });
 
 /** Zürich files have a new api url */
-list = list.map(u => u.replace("look_eth", "look_eth2"));
+list = list.map((u) => u.replace("look_eth", "look_eth2"));
 
 console.log(`Saving ${list.length} urls.`);
 fs.writeFileSync(`${__dirname}/urls.json`, JSON.stringify(list, null, 2));
@@ -38,7 +38,7 @@ const template = `
 
       function removeThumbnails(uri){
         console.log('thumbnail/delete/' + uri);
-        fetch('http://localhost:2020/thumbnail/delete/' + uri,  { method: 'GET'})
+        fetch('http://localhost:2020/thumbnail/delete/?url=' + uri,  { method: 'GET'})
           .then( response => {
             return response.json();
           }).then(data =>  {
@@ -70,8 +70,8 @@ const imaginary = template.replace(
     return (
       a +
       `<div class="thumb">
-          <img src="http://localhost:2020/thumbnail/${uri}" title="Original url:${c}" />
-          <button onclick="removeThumbnails('${uri}')">Delete</button>
+          <img src="http://localhost:2020/thumbnail?url=${uri}" title="Original url:${c}" />
+          <button onclick="removeThumbnails('${c}')">Delete</button>
         </div>`
     );
   }, "")
