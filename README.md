@@ -7,16 +7,22 @@ The docker-compose.yml creates a docker application with two services:
 - an [express](https://expressjs.com/) server which calls
 - [h2non/Imaginary](https://github.com/h2non/imaginary) for rendering the images
 
-## Getting started
+## Requirements
 
-`docker-compose up` starts the services at http://localhost:2020. You can change the port in `docker-compose.yml`. Try out these urls to test if the service is running:
+- docker
+- docker-compose
+- node.js
+
+## Build
+
+`docker-compose up` starts the services at http://localhost:2020. You can change the port in `docker-compose.yml`. Try out the endpoints to test if the service is running properly:
 
 ### Endpoints
 
 - [/](http://localhost:2020)
 - [/thumbnails](http://localhost:2020/thumbnails): List all rendered thumbnails.
-- [/thumbnail/:url](http://localhost:2020/thumbnail/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Generate a thumbnail. If it already exists a cached version will be returned. Use `?force=1` to force the regeneration of a thumbnail.
-- [/thumbnail/delete/:url](http://localhost:2020/thumbnail/delete/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Delete a thumbnail. If `url` starts with an `*`, it removes all thumbnails containing the `url`
+- [/thumbnail/?url=...](http://localhost:2020/thumbnail/url=?http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Generate a thumbnail. If it already exists a cached version will be returned. Use `&force=1` to force the regeneration of a thumbnail. The url should be encoded with `encodeURIComponent` or similar
+- [/thumbnail/delete?url=...](http://localhost:2020/thumbnail/delete/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Delete a thumbnail. If `url` starts with an `*{string}`, it removes all thumbnails with an url containing `{string}`.
 
 ## Testing
 
@@ -31,6 +37,10 @@ serve testdata
 The first time you load the page the images need to be written. After reload they should come from the cache and display considerately faster.
 
 ## Services
+
+## Express
+
+[Express](https://expressjs.com/) is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
 ### Imaginary
 
