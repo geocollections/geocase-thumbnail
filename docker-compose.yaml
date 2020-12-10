@@ -4,6 +4,8 @@ services:
     build: ./express
     ports:
       - "2020:4000"
+    environment:
+      - THUMBNAIL_WIDTH=400
 
   imaginary:
     image: h2non/imaginary:latest

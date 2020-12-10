@@ -4,6 +4,8 @@ const express = require("express"),
   fs = require("fs"),
   cors = require("cors");
 
+const THUMBNAIL_WIDTH = process.env.THUMBNAIL_WIDTH || "400";
+
 /**
  * Capture close
  */
@@ -18,9 +20,9 @@ const THUMBS = `${__dirname}/thumbnails`;
 if (!fs.existsSync(THUMBS)) {
   try {
     fs.mkdirSync(THUMBS);
-    console.log("Created the thumbnail directory.");
+    console.log(`Created the thumbnail directory: ${THUMBS}`);
   } catch (e) {
-    console.log("Could not create thumbnail directory");
+    console.log(`Could not create thumbnail directory: ${THUMBS}`);
     process.exit(0);
   }
 }
@@ -48,7 +50,7 @@ const renderAndGetImage = (url, filename, res, next) => {
         /** Probably a json was returned mentioning some missing param */
         next(
           new Error(
-            `Invalid content-type.\nExpected image/* but received ${contentType}`
+            `Invalid content-type returned from url:${url}.\nExpected image/* but received ${contentType}.`
           )
         );
       } else {
@@ -119,13 +121,18 @@ app.get("/thumbnail", async (req, res, next) => {
   const { params, query } = req;
 
   const encoded = encodeURIComponent(decodeURIComponent(query.url)),
-    url = `http://imaginary:9000/resize?width=200&url=${encoded}`,
+    url = `http://imaginary:9000/resize?width=${THUMBNAIL_WIDTH}&url=${encoded}`,
     filename = `${THUMBS}/${encoded}`;
 
-  if (!query.force && fs.existsSync(filename)) {
+  if (!query.hasOwnProperty("force") && fs.existsSync(filename)) {
     console.log("Returning cached", filename);
     res.sendFile(filename);
   } else {
+    console.log(
+      "Rendering image",
+      query.hasOwnProperty("force") ? "(force)" : "",
+      filename
+    );
     renderAndGetImage(url, filename, res, next);
   }
 });
@@ -198,11 +205,5 @@ app.use(function (err, req, res, next) {
  *
  * */
 const server = app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Express has started.`);
 });
-
-/**
- *
- * http://localhost:4000/thumbnail/http%3A%2F%2Fcoll.mfn-berlin.de%2Fimg%2FMFN_MIN_2011_00049__et_Argentit.jpg
- *
- */

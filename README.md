@@ -17,12 +17,16 @@ The docker-compose starts two services:
 
 `docker-compose up` starts the services and exposes http://localhost:2020. You can change the port in `docker-compose.yml`. Try out the endpoints to test if the service is running properly:
 
+### Enviroment variables
+
+- `THUMBNAIL_WIDTH`, defined in `docker-compose.yml`.
+
 ### Endpoints
 
 - [/](http://localhost:2020)
 - [/thumbnails](http://localhost:2020/thumbnails): List all rendered thumbnails.
-- [/thumbnail/?url=...](http://localhost:2020/thumbnail/url=?http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Generate a thumbnail. If it already exists a cached version will be returned. Use `&force=1` to force the regeneration of a thumbnail. The url should be encoded with `encodeURIComponent` or similar
-- [/thumbnail/delete?url=...](http://localhost:2020/thumbnail/delete/http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Delete a thumbnail. If `url` starts with an `*{string}`, it removes all thumbnails with an url containing `{string}`.
+- [/thumbnail?url=...](http://localhost:2020/thumbnail?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Generate a thumbnail. If it already exists a cached version will be returned. Add `&force` to the queryvariables to ignore the cache. The url should be encoded with `encodeURIComponent` or similar
+- [/thumbnail/delete?url=...](http://localhost:2020/thumbnail/delete?url=http%3A%2F%2Fwww.geo-coll.ethz.ch%2Flook_eth2%2Ffile%2Fimage%2F53%2F0000000006021.jpg): Delete a thumbnail. If `url` starts with an `*{string}`, it removes all thumbnails with an url containing `{string}`.
 
 ### Services
 
