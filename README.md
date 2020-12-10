@@ -17,7 +17,7 @@ The docker-compose starts two services:
 
 `docker-compose up` starts the services and exposes http://localhost:2020. You can change the port in `docker-compose.yml`. Try out the endpoints to test if the service is running properly:
 
-### Enviroment variables
+#### Enviroment variables
 
 - `THUMBNAIL_WIDTH`, defined in `docker-compose.yml`.
 
