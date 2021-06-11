@@ -6,6 +6,8 @@ services:
       - "2020:4000"
     environment:
       - THUMBNAIL_WIDTH=400
+      - RENDER_TIMEOUT=10000
+      - REACHABLE_TIMEOUT=5000
 
   imaginary:
     image: h2non/imaginary:latest
